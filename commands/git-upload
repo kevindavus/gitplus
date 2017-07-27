@@ -1,0 +1,3 @@
+current_branch=$(git symbolic-ref --short HEAD)
+echo $current_branch
+git push -u origin $current_branch
