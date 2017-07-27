@@ -115,3 +115,22 @@ lol nah jk
 #### git open
 
 Opens the current GitHub repo in your browser. No auth required because the browser does auth for you.
+
+Specify "current" as the last argument to open to current branch within repo.
+
+```shell
+# Open repo to master
+$ git open
+
+# Open repo to current branch
+$ git open current
+```
+
+#### git upload
+
+Pushes the current branch to remote branch of same name `git push -u origin feature/FAD-1234`
+
+```shell
+# push to remote
+$ git upload
+```
