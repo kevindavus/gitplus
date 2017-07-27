@@ -13,7 +13,7 @@
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [[ $1 = 'current' || $2 = 'current' ]]; then
-  open $(git config --get remote.origin.url | sed -e 's/git@/https:\/\//' -e 's/github.com:/github.com\//' -e 's/.git$/\/tree\//')$BRANCH;
+  open $(git config --get remote.origin.url | sed -e 's/git@/https:\/\//' -e 's/github.com:/github.com\//' -e 's/.git$//' -e 's/$/\/tree\//')$BRANCH;
 else
   echo $(git config --get remote.origin.url | sed -e 's/git@/https:\/\//' -e 's/github.com:/github.com\//' -e 's/.git$//')
 fi
